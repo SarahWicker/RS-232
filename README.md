@@ -1,4 +1,4 @@
-# RS-232
+/ RS-232
 Protocol RS-232 _ description&amp;simulation (vhdl)
 for now not parametrable, made it for a special baud rate 115200bit/s and a oscillator with a frequency clock of 25MHz
 async_txd:
@@ -15,3 +15,7 @@ principle : received flow of data and from it get the final 8 bits data. always 
   - tb_async_rxd
 
 use ModelSim 10.4 for the simulation and QuartusII for the writing and implementation (use an ACEX1K for this project)
+
+
+/--- update 17/09/2018
+Final files for RS232 : RS232_Gene.vhd, top level of async_rxd_gene.vhd and async_txd_gene.vhd which are the transmitter and receiver protocole parametrable. For both possibility to choose the frequency of the horloge system and the BaudRate, for async_rxd_gene possibility to choose the oversampling that we want (even if the best oversampling is 16)
